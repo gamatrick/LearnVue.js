@@ -1,3 +1,4 @@
+Exercice 1:
 
 À partir d’un bouton qui fait tout, séparez le code en deux : 
 
@@ -5,3 +6,10 @@
 - un composant bouton qui affiche le nom du fruit et déclenche le changement au clic sans connaître la liste ni décider du calcul.
 
 À la fin, un clic sur le bouton doit changer l’image affichée.
+
+_______________________________________________________________________________________________________
+
+Exercice 2:
+
+Faites évoluer le composant bouton pour qu’il affiche le nom du fruit dans un bouton et, en dessous, un texte indiquant la progression sous la forme “2 / 4”. Le composant ne doit pas calculer la progression lui-même et l’application doit continuer à changer de fruit quand on clique.
+
