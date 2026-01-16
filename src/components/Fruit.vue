@@ -11,22 +11,20 @@ const fruits: Fruit[] = [
   { name: 'orange', image: 'https://media.istockphoto.com/id/477836156/fr/photo/orange-fruits-isol%C3%A9-sur-blanc.jpg?s=612x612&w=0&k=20&c=Qw_SKI4glq0hjhmvmRCoLsh27VWax5Bh7ehrzSSIQXE=' },
 ]
 
+const buttonupdate = computed((): Fruit => fruits[model.value % fruits.length]!)
+const update = () => { model.value++ }
+
 interface Fruit{
   name: string,
   image: string
 }
 
-function update() {
-  model.value++ 
-}
-
-const buttonupdate = computed(()=> {
-   return fruits[model.value%3]
-})
-
 </script>
 
-
+<template>
+  <img :src="buttonupdate.image" :alt="buttonupdate.name" />
+  <FruitButton :name="buttonupdate.name" @click="model" />
+</template>
 
 <style scoped>
 img {
