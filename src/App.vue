@@ -3,5 +3,5 @@ import Fruit from './components/Fruit.vue';
 </script>
 
 <template>
-  <Fruit></Fruit>
+  <Fruit />
 </template>
