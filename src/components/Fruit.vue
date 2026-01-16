@@ -23,7 +23,7 @@ const update = () => { count.value++ }
 
 <template>
   <img :src="buttonupdate.image" :alt="buttonupdate.name" />
-  <FruitButton :name="buttonupdate.name" :count="count % fruits.length+1" @click="update" />
+  <FruitButton :name="buttonupdate.name" :count="count % fruits.length + 1" @click="update" />
 </template>
 
 <style scoped>
