@@ -1,0 +1,7 @@
+
+À partir d’un bouton qui fait tout, séparez le code en deux : 
+
+- un parent qui possède la liste des fruits, décide du fruit courant et affiche son image, 
+- un composant bouton qui affiche le nom du fruit et déclenche le changement au clic sans connaître la liste ni décider du calcul.
+
+À la fin, un clic sur le bouton doit changer l’image affichée.
