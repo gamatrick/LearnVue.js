@@ -20,7 +20,7 @@ function update() {
   model.value++ 
 }
 
-const buttonupdate = computed(() => {
+const buttonupdate = computed(()=> {
    return fruits[model.value%3]
 })
 
