@@ -1,10 +1,10 @@
 <script setup lang="ts" >
 
 import { ref, computed} from 'vue'
+import FruitButton from './FruitButton.vue'
 
 
-
-const model = ref(0)
+const count = ref(0)
 const fruits: Fruit[] = [
   { name: 'apple', image: 'https://m.media-amazon.com/images/I/81Dl5GdAVkL.png' },
   { name: 'banana', image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Banana_on_black_background.jpg' },
@@ -16,14 +16,14 @@ interface Fruit{
   image: string
 }
 
-const buttonupdate = computed((): Fruit => fruits[model.value % fruits.length]!)
-const update = () => { model.value++ }
+const buttonupdate = computed((): Fruit => fruits[count.value % fruits.length]!)
+const update = () => { count.value++ }
 
 </script>
 
 <template>
   <img :src="buttonupdate.image" :alt="buttonupdate.name" />
-  <FruitButton :name="buttonupdate.name" @click="model" />
+  <FruitButton :name="buttonupdate.name" @click="update" />
 </template>
 
 <style scoped>
