@@ -3,5 +3,5 @@ import Fruit from './components/Fruit.vue';
 </script>
 
 <template>
-  <Fruit />
+  <Fruit v-for="value in Fruit" :key="value" />
 </template>
