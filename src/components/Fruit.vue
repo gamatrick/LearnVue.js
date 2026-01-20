@@ -11,6 +11,11 @@ const fruits: Fruit[] = [
   { name: 'orange', image: 'https://media.istockphoto.com/id/477836156/fr/photo/orange-fruits-isol%C3%A9-sur-blanc.jpg?s=612x612&w=0&k=20&c=Qw_SKI4glq0hjhmvmRCoLsh27VWax5Bh7ehrzSSIQXE=' },
 ]
 
+const Tableau = [
+  { name: 'apple', image: 'https://m.media-amazon.com/images/I/81Dl5GdAVkL.png' },
+  { name: 'banana', image: 'https://upload.wikimedia.org/wikipedia/commons/2/2c/Banana_on_black_background.jpg' },
+  { name: 'orange', image: 'https://media.istockphoto.com/id/477836156/fr/photo/orange-fruits-isol%C3%A9-sur-blanc.jpg?s=612x612&w=0&k=20&c=Qw_SKI4glq0hjhmvmRCoLsh27VWax5Bh7ehrzSSIQXE=' },]
+
 interface Fruit{
   name: string,
   image: string
@@ -24,6 +29,7 @@ const update = () => { count.value++ }
 <template>
   <img :src="buttonupdate.image" :alt="buttonupdate.name" />
   <FruitButton :name="buttonupdate.name" :count="count % fruits.length + 1" @click="update" />
+  <Tableau />
 </template>
 
 <style scoped>
